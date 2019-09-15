@@ -265,10 +265,12 @@ p {
 
       &-left {
         margin-right: 10%;
+
         &_top {
           display: flex;
           flex-direction: row;
           align-content: center;
+
           &_title {
             font-weight: 600;
             font-size: 24px;
@@ -287,6 +289,7 @@ p {
           margin-top: 19px;
           margin-bottom: 64px;
         }
+
         &_step-text {
           font-weight: normal;
           font-size: 16px;
@@ -295,19 +298,24 @@ p {
         }
       }
     }
+
     .steps__section {
       display: flex;
       margin-left: 0;
+
       &-left,
       &-right {
         display: flex;
         flex-direction: column;
         width: 240px;
       }
+
       &-left {
         margin-top: 100px;
+        margin-right: 5%;
       }
     }
+
     .circle_img {
       width: 48px;
       height: 48px;
@@ -317,27 +325,35 @@ p {
       margin-left: auto;
       margin-bottom: -25px;
     }
+
     .circle_1 {
       background: #C4C4C4;
     }
+
     .circle_3 {
       background: #C4C4C4;
     }
+
     .circle_2 {
       background: #FCC304;
     }
+
     .circle_4 {
       background: #F25656;
     }
+
     .card_step_1,
     .card_step_2,
     .card_step_3,
     .card_step_4 {
       box-sizing: border-box;
+      position: relative;
       padding: 48px 32px;
       justify-content: center;
       text-align: center;
       box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.07);
+      z-index: 10;
+      background-color: #FFFFFF;
       &:hover {
         cursor: pointer;
       }
@@ -350,6 +366,23 @@ p {
 
     .card_step_1:hover {
       background-color: #56CCF2;
+      color: #FFFFFF;
+      //width: 260px;  !!!!!!!!!!
+      //height: 269px;
+    }
+
+    .card_step_2:hover {
+      background-color: #FCC304;
+      color: #FFFFFF;
+    }
+
+    .card_step_3:hover {
+      background-color: #03D542;
+      color: #FFFFFF;
+    }
+
+    .card_step_4:hover {
+      background-color: #F25656;
       color: #FFFFFF;
     }
 
@@ -383,24 +416,185 @@ p {
       Font-size: 12.6px;
       line-height: 19px;
     }
-
-
-    /*.card_step_1:hover,*/
-    /*.card_step_2:hover,*/
-    /*.card_step_3:hover,*/
-    /*.card_step_4:hover {*/
-    /*    width: 260px;*/
-    /*	height: 315px;*/
-    /*}*/
-    .features_section {
-      background-image: url("images/Bg_2.jpg");
-      margin-top: -50px;
-    }
-
-    .features_box {
-      display: flex;
-      flex-direction: column;
-      margin-left: 227px;
-    }
   }
 
+    /* FEATURES SECTION */
+   .features {
+     background-image: url("images/Bg_2.jpg");
+     background-position: center;
+     background-size: contain;
+     background-repeat: no-repeat;
+     height: 976px;
+     padding: 100px 45% 10% 10%;
+     //height: 1000px;
+     margin-top: -300px;
+     &__box{
+       &-top {
+         display: flex;
+         align-items: center;
+         margin-bottom: 20px;
+         font-weight: 800;
+         font-size: 16px;
+         margin-top: 200px;
+         &_title {
+           font-weight: 800;
+           font-size: 16px;
+           line-height: 150%;
+           letter-spacing: 2px;
+           text-transform: uppercase;
+           color: #FFFFFF;
+         }
+         &_step-title {
+           font-weight: 900;
+           font-size: 32px;
+           line-height: 140%;
+           margin-top: 0;
+         }
+       }
+     }
+   }
+
+.features_column {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.features_text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  margin-left: 4%;
+}
+
+.features_img {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  height: 680px;
+  &__box-top {
+    display: flex;
+    margin-left: 14%;
+    &_title  {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #56CCF2;
+      margin-top: 0;
+      margin-bottom: 19px;
+    }
+  }
+  &__step-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 140%;
+    margin-bottom: 120px;
+    margin-left: 14%;
+  }
+  &__box-cards {
+    display: flex;
+    justify-content: center;
+    &_card {
+      width: 300px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.05);
+      margin-right: 7%;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        transform: translateY(-30px);
+      }
+      &_text {
+        font-size: 14.4px;
+        line-height: 150%;
+        margin-bottom: 30px;
+      }
+      &_underline {
+        &-blue,
+        &-yellow,
+        &-red {
+          width: 64px;
+          height: 2px;
+          border-radius: 500px;
+          margin-bottom: 30px;
+        }
+        &-blue {
+          background-color: #56CCF2;
+        }
+        &-yellow {
+          background-color: #FCC304;
+        }
+        &-red {
+          background-color: #F25656;
+        }
+      }
+      &_name {
+        font-size: 12.6px;
+        line-height: 150%;
+      }
+      &_position {
+        &-blue,
+        &-yellow,
+        &-red {
+          font-weight: 800;
+          font-size: 12.6px;
+          line-height: 150%;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+        &-blue {
+          color: #56CCF2;
+        }
+        &-yellow {
+          color: #FCC304;
+        }
+        &-red {
+          color: #F25656;
+        }
+      }
+      &_picture {
+        position: relative;
+        z-index: 20;
+      }
+    }
+  }
+}
+
+.ellipse {
+  width: 64px;
+  height: 162px;
+  border-radius: 500px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: -50px;
+  left: 100px;
+  z-index: 10;
+}
+
+.ellipse-1 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #56CCF2;
+}
+
+.ellipse-2 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FCC304;
+}
+
+.ellipse-3 {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #F25656;
+}
+
+.picture_box {
+  display: block;
+  position: relative;
+  margin-top: 80px;
+}
