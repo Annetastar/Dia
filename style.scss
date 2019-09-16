@@ -231,7 +231,7 @@ p {
     &__box {
       display: flex;
       justify-content: center;
-      margin-bottom: 162px;
+      margin-bottom: 0;
     }
   }
 
@@ -314,6 +314,12 @@ p {
       &-left {
         margin-top: 100px;
         margin-right: 5%;
+      }
+      @media screen and (max-width: 999px){
+        &-left {
+          margin-top: 0;
+          margin-right: 5%;
+        }
       }
     }
 
@@ -649,7 +655,7 @@ p {
   display: flex;
   padding: 0 14%;
   &__left-box {
-    margin-right: 6%;
+    margin-right: 8%;
     &_top {
       display: flex;
       margin-bottom: 100px;
@@ -668,17 +674,25 @@ p {
       display: flex;
       flex-direction: column;
       &_input {
-        width: 580px;
+        width: 500px;
         height: 50px;
         border-top: none;
         border-right: none;
         border-left: none;
+        padding: 0;
+        margin: 0;
         &::placeholder {
           font-weight: normal;
-          font-size: 14px;
-          line-height: 150%;
+          font-size: 15px;
+          line-height: 50px;
           color: #152032;
           }
+        &::-webkit-input-placeholder {
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 50px;
+          color: #152032;
+        }
         &:focus {
           background-color: #56CCF2;
         }
@@ -776,6 +790,9 @@ p {
     margin-bottom: 53px;
   }
 }
+label {
+  width: 500px;
+}
 /* FOOTER */
 .footer {
   &__nav {
@@ -797,3 +814,149 @@ p {
     }
   }
 }
+
+
+
+@media screen and (max-width: 999px) {
+  .header {
+    background-image: none;
+    background-color: #56CCF2;
+
+    &__photo-box {
+      &_button {
+        position: static;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+      }
+
+      &_intro-box {
+        position: static;
+        text-align: center;
+      }
+    }
+  }
+  .what-we-do {
+    &__box {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 300px;
+
+      &_card-1,
+      &_card-2,
+      &_card-3 {
+        margin-right: 0;
+        text-align: center;
+        height: 350px;
+
+      }
+    }
+    &_title {
+      margin-bottom: 20px;
+    }
+  }
+  .process {
+    padding-top: 0;
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20%;
+
+      &-left {
+      }
+    }
+  }
+
+  .steps__section {
+    &-left {
+      margin-top: 0;
+      .card_step_1 {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-right {
+      .card_step_2 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+
+  .features {
+    background-image: none;
+    background-color: #56CCF2;
+    height: 600px;
+    padding: 100px 20%;
+    margin-top: 0;
+
+    &__box-top {
+      height: 20px;
+      margin-top: 0;
+
+      &_title {
+
+      }
+
+      &_step-title {
+        margin-top: 0;
+      }
+    }
+  }
+  .testimonials {
+    padding-top: 100px;
+
+    &__step-title {
+      display: inline-block;
+      text-align: center;
+    }
+
+    &__box-cards {
+      &_card {
+        margin-right: 2%;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__left-box {
+      margin-right: 0;
+
+      &_top {
+        width: 260px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+      }
+
+      &_button {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+      }
+
+      &_form {
+        width: 500px;
+        margin: auto;
+      }
+    }
+
+    &__right-box {
+      &_top {
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+

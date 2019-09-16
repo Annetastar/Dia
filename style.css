@@ -201,7 +201,7 @@ p {
   .what-we-do__box {
     display: flex;
     justify-content: center;
-    margin-bottom: 162px; }
+    margin-bottom: 0; }
 
 .card {
   width: 264px;
@@ -263,6 +263,10 @@ p {
     .process .steps__section-left {
       margin-top: 100px;
       margin-right: 5%; }
+    @media screen and (max-width: 999px) {
+      .process .steps__section-left {
+        margin-top: 0;
+        margin-right: 5%; } }
   .process .circle_img {
     width: 48px;
     height: 48px;
@@ -516,7 +520,7 @@ p {
   display: flex;
   padding: 0 14%; }
   .contacts__left-box {
-    margin-right: 6%; }
+    margin-right: 8%; }
     .contacts__left-box_top {
       display: flex;
       margin-bottom: 100px; }
@@ -533,15 +537,22 @@ p {
       display: flex;
       flex-direction: column; }
       .contacts__left-box_form_input {
-        width: 580px;
+        width: 500px;
         height: 50px;
         border-top: none;
         border-right: none;
-        border-left: none; }
+        border-left: none;
+        padding: 0;
+        margin: 0; }
         .contacts__left-box_form_input::placeholder {
           font-weight: normal;
-          font-size: 14px;
-          line-height: 150%;
+          font-size: 15px;
+          line-height: 50px;
+          color: #152032; }
+        .contacts__left-box_form_input::-webkit-input-placeholder {
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 50px;
           color: #152032; }
         .contacts__left-box_form_input:focus {
           background-color: #56CCF2; }
@@ -619,6 +630,9 @@ p {
     color: #56CCF2;
     margin-bottom: 53px; }
 
+label {
+  width: 500px; }
+
 /* FOOTER */
 .footer__nav {
   display: flex;
@@ -635,5 +649,89 @@ p {
       line-height: 150%;
       color: #253757;
       text-decoration: none; }
+
+@media screen and (max-width: 999px) {
+  .header {
+    background-image: none;
+    background-color: #56CCF2; }
+    .header__photo-box_button {
+      position: static;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 0; }
+    .header__photo-box_intro-box {
+      position: static;
+      text-align: center; }
+
+  .what-we-do__box {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 300px; }
+    .what-we-do__box_card-1, .what-we-do__box_card-2, .what-we-do__box_card-3 {
+      margin-right: 0;
+      text-align: center;
+      height: 350px; }
+  .what-we-do_title {
+    margin-bottom: 20px; }
+
+  .process {
+    padding-top: 0; }
+    .process__box {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20%; }
+
+  .steps__section-left {
+    margin-top: 0; }
+    .steps__section-left .card_step_1 {
+      margin-bottom: 5px; }
+  .steps__section-right .card_step_2 {
+    margin-bottom: 5px; }
+
+  .features {
+    background-image: none;
+    background-color: #56CCF2;
+    height: 600px;
+    padding: 100px 20%;
+    margin-top: 0; }
+    .features__box-top {
+      height: 20px;
+      margin-top: 0; }
+      .features__box-top_step-title {
+        margin-top: 0; }
+
+  .testimonials {
+    padding-top: 100px; }
+    .testimonials__step-title {
+      display: inline-block;
+      text-align: center; }
+    .testimonials__box-cards_card {
+      margin-right: 2%; }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    .contacts__left-box {
+      margin-right: 0; }
+      .contacts__left-box_top {
+        width: 260px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px; }
+      .contacts__left-box_button {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px; }
+      .contacts__left-box_form {
+        width: 500px;
+        margin: auto; }
+    .contacts__right-box_top {
+      width: 200px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
