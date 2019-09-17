@@ -233,7 +233,7 @@ p {
       .process__box-left_top {
         display: flex;
         flex-direction: row;
-        align-content: center; }
+        align-items: center; }
         .process__box-left_top_title {
           font-weight: 600;
           font-size: 24px;
@@ -782,8 +782,13 @@ label {
     margin-left: 5%;
     padding: 0; } }
 @media screen and (max-width: 450px) {
-  .welcome__box_illusion {
-    text-align: center; }
+  .welcome {
+    margin-top: -100px; }
+    .welcome__box_illusion {
+      text-align: center; }
+
+  .what-we-do {
+    margin-top: -100px; }
 
   .process {
     padding: 0; }
@@ -792,6 +797,9 @@ label {
       .process__box-left {
         text-align: center;
         margin: 0 3%; }
+        .process__box-left_top {
+          width: 170px;
+          margin: 0 auto; }
     .process .steps__section {
       display: flex;
       flex-direction: column;
@@ -809,9 +817,12 @@ label {
     padding: 0; }
     .features__box {
       padding: 0 3%; }
-      .features__box-top_step-title {
-        text-align: center;
-        margin-bottom: 0; }
+      .features__box-top {
+        width: 150px;
+        margin: 10px auto; }
+        .features__box-top_step-title {
+          text-align: center;
+          margin-bottom: 0; }
 
   .testimonials {
     padding: 50px 3%;
@@ -831,12 +842,17 @@ label {
     width: 100%; }
     .contacts__left-box_form_input {
       width: 100%; }
+  .contacts__step-title {
+    margin-top: 0; }
 
   label {
     width: 100%; }
 
   .footer__nav {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    width: 40%;
+    margin: 40px auto;
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
