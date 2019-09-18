@@ -745,11 +745,13 @@ p {
     &-link {
       text-decoration: none;
       margin-right: 5%;
+      &:last-child {
+        margin-right: 0;
+      }
       &-icon {
+        transition: 2s;
         &:hover {
-          width: 42px;
-          height: 43px;
-
+          transform: scale(1.2);
         }
       }
     }
@@ -790,6 +792,7 @@ p {
     color: #56CCF2;
     margin-bottom: 53px;
   }
+
 }
 label {
   width: 500px;
@@ -1016,6 +1019,14 @@ label {
       }
     }
   }
+  .testimonials {
+    &__step-title {
+     margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: block;
+    }
+  }
 .steps__section {
   justify-content: space-between;
 }
@@ -1029,11 +1040,38 @@ label {
   }
 }
 
+@media screen and (max-width: 599px){
+  .testimonials {
+    padding: 50px 3%;
+    height: auto;
+    &__step-title  {
+      margin: 0 auto;
+    }
+    &__box-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &_card {
+        margin: 0 auto;
+        &:last-child {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+}
+
 @media screen and (max-width: 450px) {
+  .header {
+    height: 1660px;
+  }
   .welcome {
     margin-top: -100px;
     &__box {
       &-top {
+        width: 200px;
+        margin: 20px auto;
       }
       &_illusion {
         text-align: center;
@@ -1046,13 +1084,16 @@ label {
   .process {
     padding: 0;
     &__box {
-      padding: 0;
+      padding: 20px 1%;
       &-left {
         text-align: center;
         margin: 0 3%;
         &_top {
           width: 170px;
           margin: 0 auto;
+        }
+        &_step-title {
+          margin-bottom: 20px;
         }
       }
     }
@@ -1061,17 +1102,27 @@ label {
       flex-direction: column;
       justify-items: center;
       margin: 0 auto;
+      position: relative;
+      height: 1006px;
         .card_step_1 {
-          width: 100%;
-          order: 1
+          box-shadow: none;
+        }
+        .card_step_2 {
+          position: absolute;
+          top: 250px;
+          box-shadow: none;
         }
         .card_step_3 {
-          order: 3;
+          position: absolute;
+          top: 500px;
+          box-shadow: none;
         }
 
       &-right {
-        .card_step_2 {
-          order: 2;
+        .card_step_4 {
+          position: absolute;
+          top: 750px;
+          box-shadow: none;
         }
       }
     }
@@ -1079,10 +1130,10 @@ label {
   .features {
     padding: 0;
     &__box {
-      padding: 0 3%;
+      padding: 20px 3%;
       &-top {
         width: 150px;
-        margin: 10px auto;
+        margin: 0 auto;
         &_step {
           &-title {
             text-align: center;
@@ -1092,23 +1143,31 @@ label {
       }
     }
   }
-  .testimonials {
-    padding: 50px 3%;
-    height: auto;
-    &__step-title  {
-      margin: 0 auto;
-    }
-    &__box-cards {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+  //.testimonials {
+  //  padding: 50px 3%;
+  //  height: auto;
+  //  &__step-title  {
+  //    margin: 0 auto;
+  //  }
+  //  &__box-cards {
+  //    display: flex;
+  //    flex-direction: column;
+  //    justify-content: center;
+  //    &_card {
+  //      margin: 0 auto;
+  //      &:last-child {
+  //        margin: 0 auto;
+  //      }
+  //    }
+  //  }
+  //}
   .vision {
     padding: 0 3%;
     height: auto;
     margin-bottom: 50px;
   }
   .contacts {
+    margin-top: 100px;
     &__left-box {
       &_form {
         width: 100%;
