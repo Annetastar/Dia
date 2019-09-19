@@ -121,6 +121,21 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  .header__photo-box_social {
+    display: flex;
+    position: absolute;
+    left: 91%;
+    top: 30%;
+    transform: rotate(90deg); }
+    .header__photo-box_social > a {
+      font-weight: 800;
+      font-size: 12.6px;
+      line-height: 150%;
+      color: #253757;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 30%; }
   .header__photo-box_intro-box {
     position: absolute;
     top: 70%;
@@ -771,18 +786,21 @@ label {
     .header__photo-box_button {
       width: 212px;
       height: 114px; }
-    .header__photo-box .button-arrow {
-      width: 65px;
-      height: 76px; }
+    .header__photo-box_social {
+      display: none; }
+  .header .button-arrow {
+    width: 65px;
+    height: 76px; }
 
   .nav-main {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-top: 30px; }
 
   .nav_list {
     margin-right: 0;
-    font-size: 50px; }
+    font-size: 30px; }
     .nav_list:last-child {
       margin-left: 0; }
 
