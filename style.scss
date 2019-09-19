@@ -1064,7 +1064,28 @@ label {
 
 @media screen and (max-width: 450px) {
   .header {
-    height: 1660px;
+    &__nav_box {
+      &-logo {
+        margin-top: 20px;
+      }
+      .nav-main {
+        margin-top: 20px;
+        .nav_list {
+          font-size: 30px;
+        }
+      }
+    }
+    height: 1350px;
+    &__photo-box {
+      background-position: top;
+      &_intro-box {
+        position: absolute;
+        top: 200px;
+      }
+      &_button {
+        display: none;
+      }
+    }
   }
   .welcome {
     margin-top: -100px;
@@ -1143,24 +1164,7 @@ label {
       }
     }
   }
-  //.testimonials {
-  //  padding: 50px 3%;
-  //  height: auto;
-  //  &__step-title  {
-  //    margin: 0 auto;
-  //  }
-  //  &__box-cards {
-  //    display: flex;
-  //    flex-direction: column;
-  //    justify-content: center;
-  //    &_card {
-  //      margin: 0 auto;
-  //      &:last-child {
-  //        margin: 0 auto;
-  //      }
-  //    }
-  //  }
-  //}
+
   .vision {
     padding: 0 3%;
     height: auto;
