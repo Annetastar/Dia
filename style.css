@@ -33,6 +33,10 @@ p {
     display: flex;
     width: 100%;
     margin: 0 auto; }
+    .header__nav_box > #menu__toggle {
+      display: none; }
+    .header__nav_box > .menu__btn {
+      width: 0; }
 
 .nav-main {
   display: flex;
@@ -843,26 +847,69 @@ label {
       margin-right: auto;
       margin-bottom: 100px; } }
 @media screen and (max-width: 450px) {
-  .header {
-    height: 1350px; }
-    .header__nav_box-logo {
-      margin-top: 20px; }
-    .header__nav_box .nav-main {
-      margin-top: 20px; }
-      .header__nav_box .nav-main .nav_list {
-        font-size: 30px; }
-    .header__photo-box {
-      background-position: top; }
-      .header__photo-box_intro-box {
-        position: absolute;
-        top: 200px; }
-      .header__photo-box_button {
-        display: none; }
+  .header__box-logo {
+    margin-top: 10px;
+    position: relative; }
+  .header__nav_box > #menu__toggle {
+    opacity: 0; }
+  .header__nav_box .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 5; }
+    .header__nav_box .menu__btn > span,
+    .header__nav_box .menu__btn > span::before,
+    .header__nav_box .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #616161; }
+    .header__nav_box .menu__btn > span::before {
+      content: '';
+      top: -8px; }
+    .header__nav_box .menu__btn > span::after {
+      content: '';
+      top: 8px; }
+  .header__nav_box #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg); }
+  .header__nav_box #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0); }
+  .header__nav_box #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg); }
+  .header__nav_box #menu__toggle:checked ~ .nav-main {
+    visibility: visible;
+    left: 0; }
+  .header__nav_box-logo {
+    margin-top: 20px; }
+  .header__nav_box .nav-main {
+    margin-top: 20px;
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    background-color: #1d38ad; }
+    .header__nav_box .nav-main .nav_list {
+      font-size: 30px; }
+  .header__photo-box {
+    background-position: top; }
+    .header__photo-box_intro-box {
+      position: absolute; }
+    .header__photo-box_button {
+      display: none; }
+  .header__about_title {
+    font-size: 30px; }
 
   .welcome {
     margin-top: -100px; }
     .welcome__box-top {
-      width: 200px;
+      width: 500px;
       margin: 20px auto; }
     .welcome__box_illusion {
       text-align: center; }
@@ -938,5 +985,16 @@ label {
     width: 40%;
     margin: 40px auto;
     text-align: center; } }
+@media screen and (max-width: 350px) {
+  .header__nav_box > .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 5; } }
 
 /*# sourceMappingURL=style.css.map */
