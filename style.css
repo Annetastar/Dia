@@ -893,6 +893,8 @@ label {
     margin-top: 20px;
     display: block;
     position: absolute;
+    left: 0;
+    width: 100%;
     visibility: hidden;
     background-color: #1d38ad; }
     .header__nav_box .nav-main .nav_list {
@@ -909,7 +911,7 @@ label {
   .welcome {
     margin-top: -100px; }
     .welcome__box-top {
-      width: 500px;
+      width: 100%;
       margin: 20px auto; }
     .welcome__box_illusion {
       text-align: center; }
