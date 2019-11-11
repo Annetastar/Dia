@@ -360,7 +360,7 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   height: 976px;
-  padding: 100px 45% 10% 10%;
+  padding: 100px 50% 5% 5%;
   margin-top: -300px; }
   .features__box-top {
     display: flex;
@@ -672,6 +672,10 @@ label {
   letter-spacing: 2px;
   margin: 0; }
 
+@media screen and (max-width: 1140px) {
+  .header {
+    background-image: none;
+    background-color: #56CCF2; } }
 @media screen and (max-width: 999px) {
   .header {
     background-image: none;

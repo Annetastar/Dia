@@ -449,7 +449,7 @@ p {
      background-size: contain;
      background-repeat: no-repeat;
      height: 976px;
-     padding: 100px 45% 10% 10%;
+     padding: 100px 50% 5% 5%;
      margin-top: -300px;
      &__box{
        &-top {
@@ -837,6 +837,12 @@ label {
   }
 }
 
+@media screen and (max-width: 1140px){
+  .header {
+    background-image: none;
+    background-color: #56CCF2;
+  }
+}
 @media screen and (max-width: 999px) {
   .header {
     background-image: none;
